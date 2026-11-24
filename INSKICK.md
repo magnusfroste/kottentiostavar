@@ -1,37 +1,40 @@
-# Inskick – Kotten – dubbelt och hälften
+# Inskick – Kotten och tiostavarna
 
 | Fält | Värde |
 |---|---|
-| Titel | Kotten – dubbelt och hälften |
-| URL | https://kottendubbelt.shipholm.dev |
-| Beskrivning (kort) | Lyssna på frågan och peka på högen med dubbelt så många eller hälften så många. Inget måste läsas. |
+| Titel | Kotten och tiostavarna |
+| URL | https://kottentiostavar.shipholm.dev |
+| Beskrivning (kort) | Bygg talet som Kotten säger – tryck på tiostavar och entalsklossar. Tio ental blir en tiostav. Inget måste läsas. |
 | Ämne | Matte |
 | Årskurs | FK–2 (innehållet är åk 1–3) |
 | Typ | Spel |
 | Enhet | Alla enheter |
-| Lgr22 | MA.1-3.5.1 |
-| Kortbild | `public/kort.png` (1200×900, spelmoment) → https://kottendubbelt.shipholm.dev/kort.png |
+| Lgr22 | MA.1-3.1.2 |
+| Kortbild | `public/kort.png` (1200×900, spelmoment) → https://kottentiostavar.shipholm.dev/kort.png |
 
 ## long_description
 
-Kotten har samlat nötter i trädhuset. Varje runda visar han sin egen hög och frågar med
-uppläst svenska: ”Kotten har tre nötter. Vilken hög har dubbelt så många?” Barnet pekar på en av
-tre högar.
+Kotten och tiostavarna är ett byggspel för positionssystemet. Kotten säger ett tal ("Bygg
+fyrtiotre") och talet står som siffror högst upp på skärmen. Barnet bygger talet på brädan med
+två knappar: en tiostav (tio sammanhängande rutor) och en entalskloss. En ångra-knapp tar bort
+den sista biten, och när tio ental ligger på brädan förvandlas de automatiskt till en tiostav –
+spelet visar växlingen i stället för att förklara den.
 
-Stämmer det lyser högen guld, siffrorna visas under alla tre högar och Kotten säger varför:
-”Rätt! Dubbelt så många som tre är sex.” Är det fel händer inget farligt – Kotten funderar,
-frågan läses om, och efter båda felhögarna lyser den rätta och spelet går vidare.
+Blir det för många bitar säger Kotten "det blev för många, ta bort en" och ångra-knappen pulserar.
+Inget går förlorat, det finns ingen tidspress och ingen game over. Efter sex tal kommer en
+resultatruta med stjärnor och en knapp för en runda till.
 
-- Nivå 1: dubbelt så många av 1–3 nötter.
-- Nivå 2: hälften så många av 2–8 nötter.
-- Nivå 3: blandat, dubbelt av 3–6 och hälften av 4–12.
+- Nivå 1: tal 11–29, högst två tiostavar.
+- Nivå 2: tal 30–89.
+- Nivå 3: talen där det gäller att sluta i tid – jämna tiotal (30, 40 … 90) och tal som slutar
+  på nio (19, 29 … 89).
 
-Felhögarna ligger bara en eller två nötter från rätt svar, så svaret kräver att barnet räknar i
-stället för att gissa på den största eller minsta högen. Åtta högar per runda, ungefär 3–5
-minuter. Prickar och stjärnor visar hur det går och resultatrutan säger hur många av åtta som
-blev rätt. Högtalarknappen läser om frågan, ljudknappen stänger av både tal och ljud.
+Tiostavarna är ritade som tio sammanhängande rutor, så barnet kan räkna dem med fingret.
+Fungerar på iPad, dator och telefon. Inget måste läsas: frågan läses upp på svenska och allt
+avgörs med ett finger. Ingen inloggning, ingen reklam, inga länkar ut, inga tredjepartsanrop
+utöver kodsnutten från skolappar.com.
 
-Tränar Lgr22 MA.1-3.5.1: ”Proportionella samband, däribland dubbelt och hälften.”
+Tränar Lgr22 MA.1-3.1.2: "Positionssystemet och hur det används för att beskriva naturliga tal."
 
 ## Kategorier (admin-id)
 
@@ -42,4 +45,4 @@ Tränar Lgr22 MA.1-3.5.1: ”Proportionella samband, däribland dubbelt och häl
 
 ## Curriculum-id
 
-- `MA.1-3.5.1` – Samband och förändring, åk 1–3 (ordagrant citat i startskärmens läroplansruta)
+- `MA.1-3.1.2` – Taluppfattning och tals användning, åk 1–3 (ordagrant citat i startskärmens läroplansruta)
