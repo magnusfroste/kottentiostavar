@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kotten och tiostavarna – tiotal och ental (åk 1–3)</title>
+<meta name="description" content="Bygg talet som Kotten säger: tryck på tiostavar och entalsklossar tills brädan visar rätt antal. Tio ental blir en tiostav. Inget måste läsas. Tränar positionssystemet, åk 1–3. Gratis, ingen inloggning.">
+<meta name="theme-color" content="#faf7f2">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="Kotten och tiostavarna">
+<meta property="og:description" content="Bygg talet med tiostavar och entalsklossar. För åk 1–3.">
+<meta property="og:image" content="og.png">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.skolappar.com/kotten.js" defer></script>
+</head>
+<body>
+
+<!-- START:startskarm -->
+<div id="startskarm">
+  <div class="sk-inner">
+    <img class="sk-ikon" src="icon-192.png" alt="" width="96" height="96">
+    <h1>Kotten och tiostavarna</h1>
+    <p class="sk-tagline">Bygg talet med tiostavar och ental</p>
+    <div class="sk-taggar">
+      <span>Spel</span><span>Matte</span><span>Åk 1–3</span>
+    </div>
+    <button class="sk-play" id="spela" aria-label="Spela Kotten och tiostavarna">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+      Spela
+    </button>
+    <p class="sk-fot">Gratis · ingen inloggning · skolappar.com</p>
+    <details class="sk-laroplan">
+      <summary>Läroplanskoppling (Lgr22)</summary>
+      <p><b>Matematik, åk 1–3, centralt innehåll:</b> ”Positionssystemet och hur det används för att beskriva naturliga tal.”</p>
+      <p>Appen tränar positionssystemet. Kotten säger ett tal och barnet bygger det på brädan med tiostavar (tio sammanhängande rutor) och entalsklossar. Tio ental växlas automatiskt till en tiostav, och på nivå 3 kommer tal där det gäller att sluta i tid – jämna tiotal och tal som slutar på nio. Källa: Skolverket, läroplanen för grundskolan (Lgr22).</p>
+    </details>
+  </div>
+</div>
+<!-- SLUT:startskarm -->
+
+<main id="spel" hidden>
+  <header class="hud">
+    <div class="hud-vanster">
+      <span id="kotten-hud"></span>
+    </div>
+    <div class="hud-mitten">
+      <span class="prickar" id="prickar" aria-label="tal klara"></span>
+      <span class="stjarnor" id="stjarnor" aria-label="stjärnor"></span>
+    </div>
+    <div class="hud-hoger">
+      <button class="ikon-knapp" id="hjalp" aria-label="Läs upp talet igen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h3l4-3v12l-4-3H4z"/><path d="M15 8a5 5 0 0 1 0 8"/></svg>
+      </button>
+      <button class="ikon-knapp" id="ljud" aria-label="Ljud på eller av">
+        <svg viewBox="0 0 24 24" aria-hidden="true" id="ljudikon"></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="mal">
+    <span id="kotten" class="mal-kotten"></span>
+    <span class="mal-text" id="mal-tal" aria-live="polite">–</span>
+    <span class="mal-ord" id="mal-ord"></span>
+  </section>
+
+  <section class="brada">
+    <svg id="scen" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet" aria-label="Brädan där talet byggs"></svg>
+  </section>
+
+  <footer class="kontroller">
+    <button class="bygg-knapp" id="plus-tio" aria-label="Lägg till en tiostav, tio till">
+      <svg viewBox="0 0 24 48" aria-hidden="true" class="bit tio-bit">
+        <rect x="4" y="2" width="16" height="44" rx="3" fill="#c98a4b" stroke="#7c5327" stroke-width="1.6"/>
+        <path d="M4 8.4h16M4 14.8h16M4 21.2h16M4 27.6h16M4 34h16M4 40.4h16" stroke="#a86f36" stroke-width="1.2"/>
+      </svg>
+      <span class="bygg-text">+10</span>
+    </button>
+    <button class="bygg-knapp" id="plus-ett" aria-label="Lägg till en entalskloss, ett till">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="bit ett-bit">
+        <rect x="5" y="5" width="14" height="14" rx="2.5" fill="#c98a4b" stroke="#7c5327" stroke-width="1.6"/>
+      </svg>
+      <span class="bygg-text">+1</span>
+    </button>
+    <button class="bygg-knapp angra" id="angra" aria-label="Ta bort den sista biten">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="bit">
+        <path d="M9 7H15a5 5 0 0 1 0 10h-4" fill="none" stroke="#4a5260" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M11 4L8 7l3 3" fill="none" stroke="#4a5260" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="bygg-text">−1</span>
+    </button>
+  </footer>
+</main>
+
+<div id="overlay" hidden>
+  <div class="ov-inner">
+    <div id="ov-bild"></div>
+    <h2 id="ov-titel"></h2>
+    <p id="ov-text"></p>
+    <div class="ov-knappar">
+      <button class="knapp stor" id="ov-nasta"></button>
+      <button class="knapp tyst" id="ov-niva" hidden>Byt nivå</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

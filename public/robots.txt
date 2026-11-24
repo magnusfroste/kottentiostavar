@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kottentiostavar.skolappar.com/sitemap.xml
