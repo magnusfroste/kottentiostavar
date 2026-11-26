@@ -32,7 +32,7 @@ resultatruta med stjärnor och en knapp för en runda till.
 Tiostavarna är ritade som tio sammanhängande rutor, så barnet kan räkna dem med fingret.
 Fungerar på iPad, dator och telefon. Inget måste läsas: frågan läses upp på svenska och allt
 avgörs med ett finger. Ingen inloggning, ingen reklam, inga länkar ut, inga tredjepartsanrop
-utöver kodsnutten från skolappar.com.
+utöver kodsnutten från skolappar.org.
 
 Tränar Lgr22 MA.1-3.1.2: "Positionssystemet och hur det används för att beskriva naturliga tal."
 
